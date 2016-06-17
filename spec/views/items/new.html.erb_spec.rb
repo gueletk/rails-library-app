@@ -5,7 +5,6 @@ RSpec.describe "items/new", type: :view do
     assign(:item, Item.new(
       :title => "MyString",
       :checked_out => false,
-      :type => "",
       :barcode_num => 1,
       :author => "MyString"
     ))
@@ -19,8 +18,6 @@ RSpec.describe "items/new", type: :view do
       assert_select "input#item_title[name=?]", "item[title]"
 
       assert_select "input#item_checked_out[name=?]", "item[checked_out]"
-
-      assert_select "input#item_type[name=?]", "item[type]"
 
       assert_select "input#item_barcode_num[name=?]", "item[barcode_num]"
 

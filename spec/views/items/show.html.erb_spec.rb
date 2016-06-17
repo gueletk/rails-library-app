@@ -5,7 +5,6 @@ RSpec.describe "items/show", type: :view do
     @item = assign(:item, Item.create!(
       :title => "Title",
       :checked_out => false,
-      :type => "Type",
       :barcode_num => 1,
       :author => "Author"
     ))
@@ -15,7 +14,6 @@ RSpec.describe "items/show", type: :view do
     render
     expect(rendered).to match(/Title/)
     expect(rendered).to match(/false/)
-    expect(rendered).to match(/Type/)
     expect(rendered).to match(/1/)
     expect(rendered).to match(/Author/)
   end
