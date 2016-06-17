@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @item.title %>
+</p>
+
+<p>
+  <strong>Checked out:</strong>
+  <%= @item.checked_out %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @item.type %>
+</p>
+
+<p>
+  <strong>Barcode num:</strong>
+  <%= @item.barcode_num %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @item.author %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>
